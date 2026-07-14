@@ -271,8 +271,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -2%;
-  color: var(--text);
-  background: var(--white);
+  color: var(--white);
+  background: var(--black);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -783,7 +783,7 @@ h6 {
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
-  color: var(--main);
+  color: var(--white);
 }
 h1.h-type2,
 h2.h-type2,
@@ -825,7 +825,7 @@ h6.font-playfair {
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
-  color: var(--main);
+  color: var(--white);
 }
 .h1.h-type2,
 .h2.h-type2,
@@ -962,9 +962,9 @@ h6,
   line-height: clamp(44px, 6vw, 76px);
 }
 
-.text-64-75 {
+.text-64-74 {
   font-size: clamp(36px, 5vw, 64px);
-  line-height: clamp(40px, 5vw, 75px);
+  line-height: clamp(40px, 5vw, 74px);
 }
 
 .text-24 {
@@ -3829,13 +3829,16 @@ header {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: var(--white);
 }
 header.header-sticky:not(.no-boxShadow) {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 header.header-sticky.scr-black {
   background: var(--black);
+}
+header.header-fixed {
+  background: var(--black);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 @media (max-width: 1199px) {
@@ -9323,9 +9326,9 @@ select.select-3:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
   height: 44px;
   padding-left: 20px;
   padding-right: 20px;
@@ -9347,9 +9350,12 @@ select.select-3:focus {
 .tf-btn.btn-third:not(:hover) {
   background: var(--bg-12);
 }
-.tf-btn.btn-white:not(:hover) {
+.tf-btn.btn-white {
   background: var(--white);
-  color: var(--black);
+  color: var(--main);
+}
+.tf-btn.btn-white:hover {
+  background: #FF8D28;
 }
 .tf-btn.btn-purple:not(:hover) {
   background: #2D0977;
@@ -9432,6 +9438,15 @@ select.select-3:focus {
 .tf-btn.style-stroke-6:hover {
   background: var(--line-9);
 }
+.tf-btn.stroke-white {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.tf-btn.stroke-white:hover {
+  background: var(--white);
+  color: var(--main);
+}
 .tf-btn.small {
   height: 40px;
   padding-left: 19px;
@@ -9460,7 +9475,7 @@ select.select-3:focus {
   background-size: 200% 100%;
   animation: gradientFlow 2s linear infinite;
   z-index: 0;
-  border-radius: 5px;
+  border-radius: 99px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;
@@ -9480,10 +9495,37 @@ select.select-3:focus {
   opacity: 1;
   visibility: visible;
 }
+.tf-btn.btn-linear {
+  background: #FF8D28;
+  color: var(--main);
+}
+.tf-btn.btn-linear::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+  background-size: 200% 100%;
+  animation: gradientFlow 2s linear infinite;
+  z-index: 0;
+  border-radius: 99px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tf-btn.btn-linear > * {
+  position: relative;
+  z-index: 1;
+}
+.tf-btn.btn-linear:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
 @media (min-width: 1200px) {
   .tf-btn {
     height: 54px;
-    --px: 32px;
+    --px: 36px;
     padding-left: var(--px);
     padding-right: var(--px);
   }
@@ -11437,6 +11479,7 @@ button.animate-btn::after,
   align-items: center;
   justify-content: center;
   gap: 6px;
+  font-weight: 500;
 }
 .tf-dropdown-select.style-default .filter-option-inner-inner img {
   max-width: 20px;
@@ -21731,5 +21774,169 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
 }
 
 /*------------ Landing ---------------- */
+/* ---------------------------------------------------------
+    * Name: Glowly - Multipurpose eCommerce HTML Template
+    * Version: 1.0.0
+    * Author: Themesflat
+    * Author URI: http://themesflat.com 
+
+	* Abstracts variable
+
+    * Core CSS
+
+    * Components
+ ------------------------------------------------------------------------------ */
+/*--------- Abstracts variable ---------- */
+.tf-header-landing .header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+@media (max-width: 1199px) {
+  .tf-header-landing {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.tf-header-landing .item-link {
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+
+.gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #26EDFF 0%, #FFD651 50%, #26EDFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: gradientFlow 2s linear infinite;
+}
+
+.gradient-text-v2 {
+  display: inline-block;
+  background: linear-gradient(90deg, #CFBCFF 0%, #FFFFFF 50%, #CFBCFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: gradientFlow 2s linear infinite;
+}
+
+.section-hero-landing {
+  padding-top: 528px;
+  padding-bottom: 88px;
+  position: relative;
+  background: #21164F;
+}
+.section-hero-landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000000 5.78%, rgba(0, 0, 0, 0.05) 31.3%, rgba(0, 0, 0, 0.85) 64.28%, #000000 100%);
+  z-index: 1;
+}
+.section-hero-landing .main-section {
+  display: grid;
+  place-items: center;
+  gap: 32px;
+}
+.section-hero-landing .head {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 12px;
+}
+.section-hero-landing .wrap-infiniteSlide {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .section-hero-landing .main-section {
+    gap: 48px;
+  }
+  .section-hero-landing .head {
+    gap: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  .section-hero-landing {
+    padding-top: 300px;
+    padding-bottom: 80px;
+  }
+  .section-hero-landing::before {
+    background: linear-gradient(180deg, #000000 5.78%, rgba(0, 0, 0, 0.5) 31.3%, rgba(0, 0, 0, 0.85) 64.28%, #000000 100%);
+  }
+}
+@media (max-width: 991px) {
+  .section-hero-landing {
+    padding-top: 250px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .section-hero-landing {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+}
+
+.infiniteSlide-demo {
+  overflow: hidden;
+}
+.infiniteSlide-demo .demo-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.infiniteSlide-demo .demo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.infiniteSlide-demo .infiniteSlide-wrapper {
+  gap: 15px;
+}
+@media (min-width: 1200px) {
+  .infiniteSlide-demo .infiniteSlide-wrapper {
+    gap: 30px;
+  }
+}
+
+.badge-landing {
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  padding: 10px 36px;
+}
+.badge-landing::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--main);
+  z-index: 0;
+  border-radius: 30px;
+}
+.badge-landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+  background-size: 200% 100%;
+  animation: gradientFlow 2s linear infinite;
+  border-radius: 30px;
+}
+.badge-landing .text {
+  position: relative;
+  z-index: 1;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -13,7 +13,7 @@ h6 {
     text-rendering: optimizeLegibility;
     font-weight: 500;
     margin-bottom: 0;
-    color: var(--main);
+    color: var(--white);
 
     &.h-type2 {
         color: #A47B00;
@@ -39,7 +39,7 @@ h6 {
     text-rendering: optimizeLegibility;
     font-weight: 500;
     margin-bottom: 0;
-    color: var(--main);
+    color: var(--white);
 
     &.h-type2 {
         color: #A47B00;
@@ -161,9 +161,9 @@ h6,
     line-height: clamp(44px, 6vw, 76px);
 }
 
-.text-64-75 {
+.text-64-74 {
     font-size: clamp(36px, 5vw, 64px);
-    line-height: clamp(40px, 5vw, 75px);
+    line-height: clamp(40px, 5vw, 74px);
 }
 
 .text-24 {

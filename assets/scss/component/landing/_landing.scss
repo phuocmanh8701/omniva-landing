@@ -1,1 +1,170 @@
 @use "../../abstracts/index"as *;
+
+.tf-header-landing {
+    .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    @include res(xl) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .item-link {
+        padding-top: 39px;
+        padding-bottom: 39px;
+    }
+}
+
+.gradient-text {
+    display: inline-block;
+    background: linear-gradient(90deg,
+            #26EDFF 0%,
+            #FFD651 50%,
+            #26EDFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% 100%;
+    animation: gradientFlow 2s linear infinite;
+}
+
+.gradient-text-v2 {
+    display: inline-block;
+    background: linear-gradient(90deg, #CFBCFF 0%, #FFFFFF 50%, #CFBCFF 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% 100%;
+    animation: gradientFlow 2s linear infinite;
+}
+
+.section-hero-landing {
+    padding-top: 528px;
+    padding-bottom: 88px;
+    position: relative;
+    background: #21164F;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #000000 5.78%, rgba(0, 0, 0, 0.05) 31.3%, rgba(0, 0, 0, 0.85) 64.28%, #000000 100%);
+        z-index: 1;
+    }
+
+    .main-section {
+        display: grid;
+        place-items: center;
+        gap: 32px;
+    }
+
+    .head {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .wrap-infiniteSlide {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        display: flex;
+    }
+
+    @include res(xl, min) {
+        .main-section {
+            gap: 48px;
+        }
+
+        .head {
+            gap: 20px;
+        }
+    }
+
+    @include res(xl) {
+        padding-top: 300px;
+        padding-bottom: 80px;
+
+        &::before {
+            background: linear-gradient(180deg, #000000 5.78%, rgba(0, 0, 0, 0.5) 31.3%, rgba(0, 0, 0, 0.85) 64.28%, #000000 100%);
+        }
+    }
+
+    @include res(lg) {
+        padding-top: 250px;
+        padding-bottom: 60px;
+    }
+
+    @include res(md) {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+}
+
+.infiniteSlide-demo {
+    overflow: hidden;
+
+    .demo-img {
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .infiniteSlide-wrapper {
+        gap: 15px;
+    }
+
+    @include res(xl, min) {
+        .infiniteSlide-wrapper {
+            gap: 30px;
+        }
+    }
+}
+
+.badge-landing {
+    font-weight: 600;
+    position: relative;
+    @include flex(center, center);
+    border-radius: 30px;
+    padding: 10px 36px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: var(--main);
+        z-index: 0;
+        border-radius: 30px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+        background-size: 200% 100%;
+        animation: gradientFlow 2s linear infinite;
+        border-radius: 30px;
+    }
+
+    .text {
+        position: relative;
+        z-index: 1;
+    }
+}

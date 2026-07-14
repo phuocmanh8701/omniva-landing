@@ -249,6 +249,7 @@
         .filter-option-inner-inner {
             @include flex(center, center);
             gap: 6px;
+            font-weight: 500;
 
             img {
                 max-width: 20px;

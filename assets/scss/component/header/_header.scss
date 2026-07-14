@@ -17,7 +17,7 @@ header {
     position: sticky;
     z-index: 100;
     @include transition3;
-    background: var(--white);
+    // background: var(--white);
 
     &.header-sticky {
         &:not(.no-boxShadow) {
@@ -27,6 +27,11 @@ header {
         &.scr-black {
             background: var(--black);
         }
+    }
+
+    &.header-fixed {
+        background: var(--black);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
     }
 }
 

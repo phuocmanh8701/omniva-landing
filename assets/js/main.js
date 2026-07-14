@@ -467,7 +467,78 @@
             }
         }, 250);
     };
+    /* Header Sticky
+       -------------------------------------------------------------------------*/
+    var headerFix = function () {
+        let navbarHeight = $("header").outerHeight();
+        let didScroll = false;
 
+        const $header = $("header");
+        const headerOriginalOffset = $header.offset().top;
+        const stickyOffset = 150;
+
+        const $stickyTop = $(
+            ".sticky-top,.sticky-xl-top, .sticky-lg-top, .sticky-md-top"
+        );
+
+        $(window).on("scroll", function () {
+            didScroll = true;
+        });
+
+        function handleHeader() {
+            const st = $(window).scrollTop();
+            navbarHeight = $header.outerHeight();
+
+            let isInHideSection = false;
+
+            $(".scroll-hide-head").each(function () {
+                const offsetTop = $(this).offset().top;
+                const offsetBottom = offsetTop + $(this).outerHeight();
+
+                if (
+                    st + navbarHeight > offsetTop &&
+                    st < offsetBottom
+                ) {
+                    isInHideSection = true;
+                    return false;
+                }
+            });
+
+            if (isInHideSection) {
+                $header.css("top", `-${navbarHeight}px`);
+                $stickyTop.css("top", "15px");
+                return;
+            }
+
+            const isFixed =
+                st > headerOriginalOffset + stickyOffset;
+
+            $header
+                .toggleClass("header-fixed", isFixed)
+                .css("top", isFixed ? "0" : `-${navbarHeight}px`);
+
+            $stickyTop.each(function () {
+                const $el = $(this);
+                const offset = $el.hasClass("no-offset") ? 0 : 15;
+
+                $el.css(
+                    "top",
+                    isFixed
+                        ? `${navbarHeight + offset}px`
+                        : `${offset}px`
+                );
+            });
+        }
+
+        handleHeader();
+
+        setInterval(function () {
+            if (didScroll) {
+                handleHeader();
+                didScroll = false;
+            }
+        }, 250);
+    };
     /* Auto Popup
     -------------------------------------------------------------------------*/
     var autoPopup = function () {
@@ -2647,60 +2718,41 @@
 
     // Dom Ready
     $(function () {
-        headerSticky();
-        // popupProductVariant();
+        headerFix();
+        // headerSticky();
         dropdownSelect();
-        btnQuantity();
-        deleteFile();
-        deleteWishList();
-        goTop();
-        // variantPicker();
-        sidebarMobile();
-        staggerWrap();
-        clickModalSecond();
-        totalPriceVariant();
-        handleProgress();
-        handleFooter();
+        // btnQuantity();
+        // deleteFile();
+        // deleteWishList();
+        // goTop();
+        // sidebarMobile();
+        // staggerWrap();
+        // clickModalSecond();
+        // totalPriceVariant();
+        // handleProgress();
+        // handleFooter();
         infiniteSlide();
-        addWishList();
-        handleSidebarFilter();
-        // estimateShipping();
-        unitEstimateShipping();
-        textCopy();
-        parallaxieInit();
-        tableCompareRemove();
-        handleMobileMenu();
-        // swatchProduct();
-        scrollBottomSticky();
-        showPassword();
-        hoverPin();
-        rateClick();
-        counterRun();
-        updateBundleTotal();
-        noticePop();
-        // hoverMenuOverlay();
-        // brandFilter();
-        // scrollX();
-        // submitFormGift();
-        // reactBtn();
-        // checkFbt();
-        // initStepRoutine();
-        // activeActionBox();
-        // hoverImgCursor();
-        autoPopup();
-        // openedDrop();
-        // doubleTab();
-        // guideDirecTab();
-        // glitchCanvas();
-        // handleUploadImage();
-        // autoTabAccordion();
-        // formatMMYY();
-        hoverVideo();
-        swatchColor();
-        heightTable();
-        toggleControl();
-        scrollGridProduct();
-        clickActive();
+        // addWishList();
+        // handleSidebarFilter();
+        // unitEstimateShipping();
+        // textCopy();
+        // parallaxieInit();
+        // tableCompareRemove();
+        // handleMobileMenu();
+        // scrollBottomSticky();
+        // showPassword();
+        // hoverPin();
+        // rateClick();
+        // counterRun();
+        // updateBundleTotal();
+        // noticePop();
+        // autoPopup();
+        // hoverVideo();
+        // swatchColor();
+        // heightTable();
+        // toggleControl();
+        // scrollGridProduct();
+        // clickActive();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
