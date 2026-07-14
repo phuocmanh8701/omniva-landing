@@ -1,0 +1,238 @@
+@use "../../abstracts/index"as *;
+
+.ic-accordion-custom {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    @include flex(center, center);
+    transition: transform 0.35s linear;
+    flex-shrink: 0;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--black);
+        @include transition3;
+        border-radius: 2px;
+    }
+
+    &::before {
+        height: 100%;
+        width: 2px;
+    }
+
+    &::after {
+        height: 2px;
+        width: 100%;
+    }
+
+    &.style-white {
+
+        &::after,
+        &::before {
+            background-color: var(--white);
+        }
+    }
+
+    &.cl-2 {
+
+        &::after,
+        &::before {
+            background-color: var(--text);
+        }
+    }
+}
+
+
+.accordion-action {
+    @include flex(center, space-between);
+    padding-top: 28px;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+    @include transition3;
+    gap: 12px;
+
+    .icon {
+        &::before {
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    .ic-ar {
+        display: block;
+        transform: rotate(180deg);
+        @include transition3;
+    }
+
+    &.collapsed {
+        margin-bottom: 0px;
+        padding-bottom: 28px;
+
+        .ic-ar {
+            transform: rotate(0deg);
+        }
+
+        .icon {
+
+            &::before {
+                transform: rotate(0deg);
+            }
+
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+
+
+    @include res(lg) {
+        padding-top: 16px;
+
+        &.collapsed {
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.accordion-item-v1 {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: var(--line);
+    }
+
+    .accordion-content {
+        padding-bottom: 16px;
+    }
+
+    @include res(lg, min) {
+        .accordion-content {
+            padding-bottom: 28px;
+        }
+    }
+
+    @include res(xl, min) {
+        .accordion-action {
+            padding-top: 30px;
+
+            &.collapsed {
+                padding-bottom: 30px;
+            }
+
+            &:not(.collapsed) {
+                margin-bottom: 20px;
+            }
+
+            .ic-accordion-custom {
+                width: 24px;
+                height: 24px;
+
+                &::before {
+                    width: 4px;
+                    border-radius: 99px;
+                }
+
+                &::after {
+                    height: 4px;
+                    border-radius: 99px;
+                }
+            }
+        }
+
+        .accordion-content {
+            padding-bottom: 30px;
+        }
+
+        &.style-2 {
+            .accordion-action {
+                padding-top: 20px;
+
+                &.collapsed {
+                    padding-bottom: 20px;
+                }
+            }
+
+            .accordion-content {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.accordion-item-v2 {
+    position: relative;
+
+    .accordion-action {
+        padding-top: 24px;
+    }
+
+    .accordion-content {
+        display: grid;
+        place-items: start;
+        gap: 16px;
+        padding-bottom: 24px;
+    }
+
+    @include res(xl, min) {
+        .accordion-action {
+            padding-top: 32px;
+
+            &.collapsed {
+                padding-bottom: 32px;
+            }
+
+            &:not(.collapsed) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .accordion-content {
+            padding-bottom: 32px;
+            gap: 24px;
+        }
+    }
+}
+
+.accordion-item-v3 {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--line);
+    }
+
+
+
+    .accordion-content {
+        padding-bottom: 16px;
+    }
+
+    @include res(lg, min) {
+        .accordion-content {
+            padding-bottom: 28px;
+        }
+
+        .accordion-action {
+            &:not(.collapsed) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

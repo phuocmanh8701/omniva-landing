@@ -1,0 +1,563 @@
+@use "../../abstracts/index"as *;
+
+.tf-pin-btn {
+    cursor: pointer;
+    @include transition3;
+    position: relative;
+
+    span {
+        @include flex(center, center);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: white;
+        @include transition3;
+        color: var(--white);
+        border: 1px solid var(--bg);
+        background: var(--bg-31);
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: solid 1px var(--line);
+            border-radius: 50%;
+            @include transition3;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: solid 1px var(--white);
+            border-radius: 50%;
+            @include transition3;
+            animation-delay: 1s !important;
+        }
+
+        &::before,
+        &::after {
+            animation: ripple-line 2s linear infinite;
+        }
+    }
+
+    &:hover {
+        span {
+            background: var(--white);
+            color: var(--main);
+        }
+    }
+
+    @include res(xl, min) {
+        span {
+            width: 46px;
+            height: 46px;
+        }
+    }
+}
+
+.tf-pin-btn-2 {
+    cursor: pointer;
+    @include transition3;
+    position: relative;
+    width: 32px;
+    height: 32px;
+
+    .ic-wrap {
+        border: 1px solid #F7F7F7;
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        background: #C3C3C3CC;
+        border-radius: 50%;
+        color: var(--white);
+        @include transition3;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        border: solid 1px var(--white);
+        border-radius: 50%;
+        @include transition3;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        border: solid 1px var(--white);
+        border-radius: 50%;
+        @include transition3;
+        animation-delay: 1s !important;
+    }
+
+    &::before,
+    &::after {
+        animation: ripple-line 2s linear infinite;
+        filter: blur(1px);
+    }
+
+    .icon {
+        @include transition3;
+
+        &.icon-Minus {
+            position: absolute;
+            @include hidden;
+            transform: rotate(-90deg);
+        }
+    }
+
+    &.show {
+        .icon {
+            &.icon-Plus {
+                @include hidden;
+                transform: rotate(90deg);
+            }
+
+            &.icon-Minus {
+                @include visible;
+                transform: rotate(0deg);
+            }
+        }
+
+        .ic-wrap {
+            background: var(--white);
+            color: var(--main);
+        }
+    }
+
+    @include res(xl, min) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.banner-lookbook {
+    position: relative;
+
+    .img-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .lookbook-item {
+        position: absolute;
+    }
+
+    &.style-2 {
+        .img-banner {
+            min-height: 350px;
+        }
+    }
+
+    .position1 {
+        top: 47%; //
+        left: 35%; //
+    }
+
+    .position2 {
+        top: 70%; //
+        left: 52%; //
+    }
+
+    .position3 {
+        top: 61%; //
+        left: 16%; //
+    }
+
+    .position4 {
+        top: 80%; //
+        left: 25%; //
+    }
+
+    .position5 {
+        top: 85%; //
+        left: 54%; //
+    }
+
+    .position6 {
+        top: 86%; //
+        left: 67%; //
+    }
+
+    .position7 {
+        top: 47%; //
+        left: 71%; //
+    }
+
+    .position8 {
+        top: 20.8%;
+        left: 23.3%;
+    }
+
+    .position9 {
+        top: 32.5%;
+        left: 67.1%;
+    }
+
+    .position10 {
+        top: 75.9%;
+        left: 57.4%;
+    }
+
+    .position11 {
+        top: 42.7%;
+        left: 11.9%;
+    }
+
+    .dropdown-menu {
+        border: 0;
+        border-radius: 0px;
+        background-color: transparent;
+        margin: 0px 0px 0px 10px !important;
+        display: flex;
+        pointer-events: none;
+
+        .lookbook-product {
+            @include hidden;
+        }
+
+        &.show {
+            pointer-events: all;
+
+            .lookbook-product {
+                transition: opacity 0.3s ease;
+                transition-delay: 0.1s;
+                @include visible;
+            }
+        }
+    }
+
+    .dropdown {
+        &.dropstart {
+            .dropdown-menu {
+                &::after {
+                    content: none;
+                    position: absolute;
+                    right: -7px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-left: 8px solid var(--white);
+                    border-bottom: 10px solid transparent;
+                }
+            }
+        }
+
+        &.dropend {
+            .dropdown-menu {
+                &::after {
+                    content: none;
+                    position: absolute;
+                    left: -7px !important;
+                    right: unset !important;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-right: 8px solid var(--white) !important;
+                    border-bottom: 10px solid transparent;
+                    border-left: unset !important;
+                }
+            }
+        }
+
+        &.dropup {
+            .dropdown-menu {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .content-abs {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    @include res(md, min) {
+        .lookbook-product {
+            margin: -42px 0px;
+        }
+
+        .dropdown-menu {
+            z-index: 99;
+        }
+
+        .dropdown-menu {
+            margin: 0px 10px 0px 10px !important;
+        }
+    }
+
+    @include res(xl, min) {
+        .content-abs {
+            bottom: 40px;
+            left: 40px;
+        }
+    }
+
+    @include res(md) {
+        .dropdown-menu {
+            &::after {
+                display: none !important;
+            }
+        }
+
+        .content-abs {
+            display: none;
+        }
+
+        .lookbook-product {
+            @include transition3;
+            border-radius: 0;
+            width: 100%;
+            margin: 12px;
+            border-radius: 8px;
+        }
+
+        .dropdown-menu {
+            position: fixed !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            right: 0 !important;
+            left: 0 !important;
+            transform: unset !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: flex;
+            align-items: end;
+            border-radius: 0px;
+            @include hidden;
+            @include transition3;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+
+            &.show {
+                @include visible;
+            }
+        }
+
+        &.style-2 {
+            min-width: 1200px;
+
+            .img-banner {
+                aspect-ratio: 0 !important;
+                min-height: 350px;
+            }
+        }
+    }
+
+    @include res(sm, between, md) {
+        .img-banner {
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.tf-lookbook-hover {
+    .bundle-pin-item {
+        cursor: pointer;
+    }
+
+    .bundle-hover-item {
+        @include transition3;
+
+        &.no-hover {
+            opacity: 0.3;
+        }
+    }
+}
+
+.lookbook-product {
+    padding: 10px;
+    min-width: 333px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    .prd-image {
+        max-width: 84px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .prd-content {
+        display: grid;
+        gap: 8px;
+        place-items: start;
+        flex: 1;
+    }
+
+    @include res(md) {
+        min-width: max-content;
+    }
+
+    @include res(lg) {
+        min-width: 300px;
+        gap: 12px;
+    }
+
+    @include res(sm) {
+        box-shadow: unset;
+    }
+}
+
+.bundle-product-list {
+    .bundle-product-item {
+        &:not(:first-child) {
+            padding-top: 20px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 20px;
+        }
+    }
+
+    &.has-hover {
+        .bundle-product-item {
+            &:not(.no-hover) {
+                .prd-image {
+
+                    &::before,
+                    &::after {
+                        @include visible;
+                    }
+                }
+            }
+        }
+    }
+
+    @include res(xxl, min) {
+        .bundle-product-item {
+            padding-bottom: 24px;
+
+            &:not(:first-child) {
+                padding-top: 24px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--line);
+                padding-bottom: 23px;
+            }
+        }
+    }
+}
+
+.bundle-product-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .product-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .prd-infor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        width: 100%;
+    }
+
+    .prd-image {
+        max-width: 100px;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: calc(100/130);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--main);
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            z-index: 1;
+        }
+
+        &::before,
+        &::after {
+            @include transition3;
+            @include hidden;
+        }
+    }
+
+    .number-order {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include flex(center, center);
+        border: 1px solid var(--line-11);
+        flex-shrink: 0;
+    }
+
+    .infor_name,
+    .prd-select {
+        margin-bottom: 12px;
+    }
+
+    @include res(xl, min) {
+        .product-box {
+            gap: 22px;
+        }
+
+        .infor_name,
+        .prd-select {
+            margin-bottom: 20px;
+        }
+    }
+}

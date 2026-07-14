@@ -1,0 +1,85 @@
+@use "../../abstracts/index"as *;
+
+
+.tf-topbar {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    position: relative;
+    z-index: 101;
+
+    .br-line {
+        &.fake-class {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .btn-close-add {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .tf-btn-swiper-main {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 80%;
+
+        .text-adver {
+            gap: 14px;
+
+            .br-line {
+                width: 14px;
+            }
+        }
+
+        .nav-prev-swiper,
+        .nav-next-swiper {
+            display: flex;
+        }
+    }
+
+    @include res(lg, min) {
+        .tf-btn-swiper-main {
+            max-width: 410px;
+        }
+    }
+
+    @include res(lg) {
+        .tf-btn-swiper-main {
+            margin: 0 auto;
+        }
+    }
+}
+
+.swiper-topbar {
+    &.swiper-vertical {
+        height: 18px;
+    }
+
+    .text-adver {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &.adver-2 {
+            gap: 12px;
+        }
+    }
+
+    .js-countdown {
+        .countdown__item {
+            &:last-child {
+                .countdown__value {
+                    min-width: 15px;
+                    display: inline-flex;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
