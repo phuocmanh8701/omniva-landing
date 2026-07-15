@@ -2743,7 +2743,7 @@
         // showPassword();
         // hoverPin();
         // rateClick();
-        // counterRun();
+        counterRun();
         // updateBundleTotal();
         // noticePop();
         // autoPopup();

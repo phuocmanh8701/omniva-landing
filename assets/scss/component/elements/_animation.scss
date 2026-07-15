@@ -302,3 +302,13 @@
         background-position: 200% 50%;
     }
 }
+
+@keyframes gradientFlowUp {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 50% 200%;
+    }
+}

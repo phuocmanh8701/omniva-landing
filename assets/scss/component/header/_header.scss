@@ -354,6 +354,24 @@ header {
     &.type-trend {
         background: #F0A750;
     }
+
+
+}
+
+.demo-label-v2 {
+    padding: 3px 10px;
+    border-radius: 30px;
+
+    &.type-new {
+        background: #A31EAF;
+    }
+
+    &.type-trend {
+        background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+        background-size: 200% 100%;
+        animation: gradientFlow 2s linear infinite;
+        color: var(--main);
+    }
 }
 
 .demo-item {

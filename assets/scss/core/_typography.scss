@@ -124,6 +124,14 @@ h6,
     font-family: $font-dm_san;
 }
 
+.font-plus_jakarta {
+    font-family: $font-plus_jakarta;
+}
+
+.font-script {
+    font-family: $font-script;
+}
+
 .text-hero {
     font-size: clamp(40px, 6vw, 72px);
     line-height: clamp(52px, 7.5vw, 90px);
@@ -151,6 +159,11 @@ h6,
     line-height: clamp(24px, 2vw, 34px);
 }
 
+.text-29-41 {
+    font-size: clamp(20px, 2.6vw, 29px);
+    line-height: clamp(30px, 4.2vw, 41px);
+}
+
 .text-32-48 {
     font-size: clamp(28px, 3.5vw, 32px);
     line-height: clamp(28px, 4.2vw, 48px);
@@ -171,6 +184,11 @@ h6,
     line-height: clamp(18px, 2vw, 24px);
 }
 
+.text-42 {
+    font-size: clamp(28px, 3.8vw, 42px);
+    line-height: 100%;
+}
+
 .text-64 {
     font-size: clamp(36px, 5vw, 64px);
     line-height: clamp(36px, 5vw, 64px);
@@ -187,7 +205,7 @@ h6,
 }
 
 /* Font size */
-@for $s from 10 through 20 {
+@for $s from 10 through 30 {
     .fs-#{$s} {
         font-size: #{$s}px !important;
     }

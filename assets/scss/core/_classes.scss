@@ -686,6 +686,30 @@
     }
 }
 
+.spacing-bottom-11 {
+    margin-bottom: 77px;
+
+    @include res(xl) {
+        margin-bottom: 40px;
+    }
+
+    @include res(lg) {
+        margin-bottom: 30px;
+    }
+}
+
+.spacing-bottom-12 {
+    margin-bottom: 80px;
+
+    @include res(xl) {
+        margin-bottom: 40px;
+    }
+
+    @include res(lg) {
+        margin-bottom: 30px;
+    }
+}
+
 /* Other */
 .text-primary {
     color: var(--primary) !important;
@@ -923,6 +947,19 @@
     }
 }
 
+.link-inner-underline {
+
+    .inner-underline {
+        @include transition3;
+        text-decoration: underline;
+    }
+
+    &:not(:hover) {
+        .inner-underline {
+            text-decoration-color: transparent;
+        }
+    }
+}
 
 .text-decoration-thickness {
     text-decoration-thickness: var(--thickness, 1px) !important;
