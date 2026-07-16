@@ -199,9 +199,26 @@ h6,
     line-height: clamp(40px, 5vw, 68px);
 }
 
+.text-74 {
+    font-size: clamp(40px, 5vw, 74px);
+    line-height: clamp(40px, 5vw, 74px);
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
 .text-128 {
     font-size: clamp(64px, 8vw, 128px);
     line-height: clamp(64px, 8vw, 128px);
+}
+
+.text-124 {
+    font-size: clamp(64px, 8vw, 124px);
+    line-height: clamp(64px, 8vw, 124px);
+}
+
+.text-164 {
+    font-size: clamp(80px, 10vw, 164px);
+    line-height: clamp(80px, 10vw, 164px);
 }
 
 /* Font size */
@@ -397,6 +414,10 @@ h6,
 
     .lh-xl-58 {
         line-height: 58px !important;
+    }
+
+    .lh-xl-60 {
+        line-height: 60px !important;
     }
 
     .lh-xl-68 {

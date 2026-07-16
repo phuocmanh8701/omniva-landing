@@ -710,6 +710,22 @@
     }
 }
 
+.spacing-bottom-13 {
+    margin-bottom: 100px;
+
+    @include res(xxl) {
+        margin-bottom: 80px;
+    }
+
+    @include res(xl) {
+        margin-bottom: 40px;
+    }
+
+    @include res(lg) {
+        margin-bottom: 30px;
+    }
+}
+
 /* Other */
 .text-primary {
     color: var(--primary) !important;
@@ -1132,6 +1148,10 @@
 
 .bg-linear-v1 {
     background: linear-gradient(90deg, #7F6CD4 0%, #2F5484 100%) !important;
+}
+
+.bg-linear-v2 {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(153, 153, 153, 0) 100%);
 }
 
 .text-line-clamp-1 {

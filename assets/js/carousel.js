@@ -504,3 +504,85 @@ if ($(".modal-quickview").length > 0) {
         updateModalActiveButton(type, mainQV.activeIndex);
     });
 }
+
+
+
+// if ($(".slider-3d").length > 0) {
+//     var swiper = new Swiper(".slider-3d", {
+//         loop: true,
+//         spaceBetween: 0,
+//         slidesPerView: 1.2,
+//         centeredSlides: true,
+//         // autoplay: true,
+//         speed: 1000,
+//         observer: true,
+//         observeParents: true,
+//         freeMode: false,
+//         watchSlidesProgress: true,
+//         effect: "coverflow",
+//         grabCursor: true,
+//         coverflowEffect: {
+//             rotate: 0,
+//             stretch: 604,
+//             stretch: 500,
+//             depth: 0,
+//             modifier: 1,
+//             scale: 1,
+//             slideShadows: false
+//         },
+//         breakpoints: {
+//             0: {
+//                 slidesPerView: 1.1,
+//                 coverflowEffect: {
+//                     stretch: 100,
+//                 },
+//             },
+//             1441: {
+//                 slidesPerView: 1.2,
+//             }
+//         }
+//     });
+// }
+
+
+const swiper = new Swiper(".slider-3d", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: -50,
+    speed: 600,
+    watchSlidesProgress: true,
+    initialSlide: 1,
+    pagination: {
+        el: ".tf-sw-pagination",
+        clickable: true,
+    },
+    on: {
+        progress(swiper) {
+
+            swiper.slides.forEach((slide) => {
+
+                const progress = slide.progress;
+
+                const abs = Math.abs(progress);
+
+                let scale = 1 - abs * 0.15;
+
+                if (scale < 0.8) scale = 0.8;
+
+                const translate = progress * 180;
+
+                const z = -abs * 180;
+
+                slide.style.transform =
+                    `translateX(${translate}px)
+                     translateZ(${z}px)
+                     scale(${scale})`;
+
+                slide.style.opacity = 1 - abs * 0.35;
+
+                slide.style.zIndex = 100 - Math.round(abs * 10);
+            });
+
+        }
+    }
+});

@@ -87,258 +87,129 @@
 
 
 .list-tab-btn-v1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .br-line {
-        width: 26px;
-        transform: rotate(112deg);
-        background: var(--text);
-    }
 
     .tf-btn-tab {
-        padding-top: 7px;
-        padding-bottom: 7px;
+        padding: 32px 24px;
+        width: 100%;
         position: relative;
-        display: flex;
-        align-items: start;
-        gap: 4px;
-        color: var(--main);
 
-        &:not(.active) {
-            border-color: transparent;
+        .text {
+            @include transition3;
+        }
 
-            &::before {
-                width: 0%;
-                left: auto;
-                right: 0;
-            }
+        .text-2 {
+            position: absolute;
+            @include hidden;
+            @include transition3;
         }
 
         &::before {
             content: "";
             position: absolute;
             bottom: 0;
-            left: auto;
-            width: 100%;
+            left: 0;
+            right: 0;
             height: 1px;
-            background: var(--main);
+            background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+            background-size: 200% 100%;
+            animation: gradientFlow 2s linear infinite;
+            @include hidden;
             @include transition3;
         }
 
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--white_30);
+            @include transition3;
+        }
+
+        &:hover,
         &.active {
-            color: var(--main);
+            .text {
+                @include hidden;
+            }
+
+            .text-2 {
+                @include visible;
+            }
+
+            &::before {
+                @include visible;
+            }
+
+            &::after {
+                @include hidden;
+            }
         }
     }
 
     @include res(sm, min) {
         gap: 22px;
     }
-}
 
-
-.list-tab-btn-v2 {
-    display: grid;
-    gap: 20px;
-
-    .nav-tab-item {
+    @include res(xl) {
         display: flex;
-    }
-
-    .tf-btn-tab {
-        display: flex;
-        align-items: start;
-        gap: 4px;
-        color: var(--white);
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: auto;
-            right: 0;
-            width: 0;
-            height: 1px;
-            background: var(--white);
-            @include transition3;
-        }
-
-        &:not(.active) {
-            color: var(--white_50);
-        }
-
-        &.active {
-            &::before {
-                left: 0;
-                right: auto;
-                width: 100%;
-            }
-        }
-    }
-
-    &.style-2 {
-        display: flex;
+        overflow: auto;
+        text-wrap: nowrap;
 
         .tf-btn-tab {
-            color: var(--main);
-
-            &::before {
-                background: var(--main);
-            }
-        }
-    }
-
-    &.type-2 {
-        .tf-btn-tab {
-            &:not(.active) {
-                color: var(--text);
-            }
-        }
-    }
-
-    @include res(xl, min) {
-        &.style-2 {
-            .tf-btn-tab {
-                padding-top: 7px;
-                padding-bottom: 7px;
-            }
+            padding: 10px;
         }
     }
 }
 
-.list-tab-btn-v3 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
-    overflow: auto;
-    white-space: nowrap;
 
-    .tf-btn-tab {
-        justify-content: center;
-        padding: 10px 18px;
-        font-weight: 500;
-        position: relative;
-        color: var(--main);
+.accordion-item-v4 {
+    --radius: 10px;
+    border-radius: var(--radius);
+    background: var(--black);
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0px;
-            left: auto;
-            right: 0;
-            width: 0;
-            height: 1px;
-            background: var(--black);
-            @include transition3;
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
+        background-size: 200% 100%;
+        animation: gradientFlow 2s linear infinite;
+        z-index: -1;
+        border-radius: var(--radius);
+    }
 
-        &.active {
-            &::after {
-                right: auto;
-                left: 0;
-                width: 100%;
-            }
+    .accordion-action {
+        .ic-ar {
+            font-size: 24px;
         }
     }
 
-    @include res(ssm, min) {
-        justify-content: center;
-
+    .accordion-content {
+        padding-bottom: 16px;
     }
 
     @include res(lg, min) {
-        .tf-btn-tab {
-            min-width: 154px;
-        }
-    }
-}
+        padding-left: 30px;
+        padding-right: 30px;
+        --radius: 20px;
 
-.list-tab-btn-v4 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+        .accordion-action {
+            padding-top: 30px;
 
-    .tf-btn-tab {
-        border-radius: 6px;
-        border: 1px solid var(--line-9);
-        color: var(--main);
-        padding: 7px 20px;
-
-        &.active,
-        &:hover {
-            border-color: #977100;
-        }
-    }
-
-    &.style-2 {
-        .tf-btn-tab {
-            &:hover {
-                border-color: var(--bg-26);
+            &.collapsed {
+                padding-bottom: 30px;
             }
 
-            &.active {
-                border-color: var(--bg-26);
-                background: var(--bg-26);
-                color: var(--white);
-            }
+            &:not(.collapsed) {}
         }
-    }
 
-    @include res(lg, min) {
-        .tf-btn-tab {
-            padding: 9px 31px;
+        .accordion-content {
+            padding-bottom: 30px;
         }
-    }
-}
-
-.list-tab-btn-v5 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .tf-btn-tab {
-        padding: 12px 32px;
-        border-radius: 99px;
-        color: var(--main);
-        background: #2D09771A;
-
-        &.active,
-        &:hover {
-            background: #2D0977;
-            color: var(--white);
-        }
-    }
-
-    &.style-2 {
-        .tf-btn-tab {
-            border: 1px solid var(--line);
-            background: var(--white);
-
-            &:hover,
-            &.active {
-                background: #572B98;
-                border-color: #572B98;
-            }
-        }
-    }
-
-    @include res(lg, min) {
-        &.style-2 {
-            .tf-btn-tab {
-                padding: 9px 31px;
-            }
-        }
-    }
-
-    @include res(lg) {
-        .tf-btn-tab {
-            padding: 10px 20px;
-        }
-    }
-
-    @include res(ssm, min) {
-        justify-content: center;
     }
 }

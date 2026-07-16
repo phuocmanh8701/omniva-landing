@@ -2716,6 +2716,36 @@
         }, 300);
     }
 
+    /* Circle Text
+   -------------------------------------------------------------------------*/
+    var circleText = () => {
+        $(".wg-circular-text").each(function () {
+            const originalText = this.querySelector(".original-text");
+            const container = this.querySelector(".circular-text");
+
+            if (!originalText || !container) return;
+
+            const text = originalText.textContent.trim();
+            const characters = text.split("");
+            const totalCharacters = characters.length;
+
+            if (!totalCharacters) return;
+
+            const angleStep = 360 / totalCharacters;
+
+            container.innerHTML = "";
+
+            characters.forEach((char, index) => {
+                const span = document.createElement("span");
+                span.textContent = char;
+
+                const angle = angleStep * index;
+                span.style.transform = `rotate(${angle}deg)`;
+
+                container.appendChild(span);
+            });
+        });
+    };
     // Dom Ready
     $(function () {
         headerFix();
@@ -2753,6 +2783,7 @@
         // toggleControl();
         // scrollGridProduct();
         // clickActive();
+        circleText();
 
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
