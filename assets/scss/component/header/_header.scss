@@ -366,6 +366,10 @@ header {
         background: #A31EAF;
     }
 
+    &.type-hot {
+        background: #B20000;
+    }
+
     &.type-trend {
         background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
         background-size: 200% 100%;

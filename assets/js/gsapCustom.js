@@ -792,7 +792,7 @@
         // changetext();
         // hoverRepel();
         // swiperHor();
-        // scrollSmooth();
+        scrollSmooth();
         // parallaxEngine();
         // initCateGsap();
         // heroBannerParallax();
