@@ -46,7 +46,7 @@
     </div>
     <!-- /Preload -->
 
-    <main id="wrapper">
+    <main id="wrapper" class="overflow-hidden">
         <!-- Topbar -->
 
         <!-- /Topbar -->
@@ -270,7 +270,7 @@
                             portfolios, and creative projects—elevate your online presence today!
                         </p>
                     </div>
-                    <div class="tf-grid-layout sm-col-2 gap-15">
+                    <div class="tf-list gap-15 flex-column flex-sm-row">
                         <a href="#" class="tf-btn btn-linear">
                             <i class="icon icon-ShoppingBag"></i>
                             <span class="text">
@@ -288,7 +288,7 @@
         </div>
         <!-- /Hero -->
         <!-- About -->
-        <div class="">
+        <div class="section-about-landing flat-spacing pb-0">
             <div class="container">
                 <div class="about-landing">
                     <div class="bg-item-img">
@@ -308,7 +308,7 @@
                                 Themesflat
                             </span>
                         </h2>
-                        <p class="desc">
+                        <p class="desc cl-text-26">
                             Themesflat has 9 year experiences in providing premium HTML Template on ThemeForest. Explore
                             what we achieve in our journey!
                         </p>
@@ -344,11 +344,11 @@
         </div>
         <!-- /About -->
         <!-- Why Choose -->
-        <div class="flat-spacing">
+        <div class="flat-spacing-6 pb-0">
             <div class="container">
                 <div class="land-heading spacing-bottom-11">
                     <div class="col-left">
-                        <p class="mini-title fw-semibold gradient-text mb-10">
+                        <p class="mini-title fw-semibold gradient-text letter-space-0 mb-10">
                             WHY CHOOSE OMNIVA?
                         </p>
                         <h2 class="title">
@@ -458,8 +458,21 @@
         </div>
         <!-- /Why Choose -->
         <!-- Demo -->
-        <div class="section-demo-page flat-spacing">
-            <div class="container">
+        <div class="section-demo-page flat-spacing-11">
+            <div class="s-bg-img item-1">
+                <svg width="1915" height="556" viewBox="0 0 1915 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-5" width="1920" height="556" fill="url(#paint0_linear_1367_6501)" fill-opacity="0.8" />
+                    <defs>
+                        <linearGradient id="paint0_linear_1367_6501" x1="955" y1="0" x2="955" y2="556"
+                            gradientUnits="userSpaceOnUse">
+                            <stop />
+                            <stop offset="0.5" stop-color="#628933" />
+                            <stop offset="1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="container position-relative z-1">
                 <div class="land-heading-2 text-center spacing-bottom-12">
                     <div class="counter-home font-dm_san fw-semibold">
                         <p class="number-count view-counter gradient-text">
@@ -954,7 +967,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="landing-bottom flat-spacing-2">
+                <div class="landing-bottom flat-spacing-2 pb-0">
                     <p class="font-script text-64 fst-italic">
                         More demos are coming...
                     </p>
@@ -1024,7 +1037,7 @@
         </div>
         <!-- /Feature -->
         <!-- Ready Use -->
-        <div class="section-used flat-spacing-3">
+        <div class="section-used flat-spacing-10 pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 order-lg-2">
@@ -1128,7 +1141,29 @@
         </div>
         <!-- /Ready Use -->
         <!-- Outstanding -->
-        <div class="section-outstanding flat-spacing">
+        <div class="section-outstanding flat-spacing-11 position-relative">
+            <div class="s-bg-img item-2">
+                <svg width="1920" height="3029" viewBox="0 0 1920 3029" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1379_6036)">
+                        <path d="M1105.5 973.5L-96 650L-124 973.5L670.5 2379L1383 2259L1821 1684L1105.5 973.5Z"
+                            fill="url(#paint0_linear_1379_6036)" fill-opacity="0.6" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1379_6036" x="-774" y="0" width="3245" height="3029"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="325" result="effect1_foregroundBlur_1379_6036" />
+                        </filter>
+                        <linearGradient id="paint0_linear_1379_6036" x1="-34.8931" y1="650" x2="1731.89" y2="2379"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDA414" />
+                            <stop offset="1" stop-color="#97610C" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
             <div class="container">
                 <div class="land-heading spacing-bottom-11">
                     <div class="col-left">
@@ -1162,7 +1197,7 @@
                     <div class="col-lg-6 col-xl-5">
                         <div class="land-feature-v01 style-v1">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Smart Product Filter
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1243,7 +1278,7 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="land-feature-v01 style-v3">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Product Variant Swatches
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1270,12 +1305,15 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="land-feature-v01 style-v4">
                             <div class="feature-content">
-                                <p class="feature_name h4">
-                                    Cart Drawer with Free Shipping Goal
+                                <p class="feature_name h4 fs-22">
+                                    Cart Drawer with Free <br class="d-none d-xxl-block">
+                                    Shipping Goal
                                 </p>
-                                <p class="feature_desc text-caption cl-text-26">
-                                    Generate professional Shopify pages faster with intelligent tools built specifically
-                                    for ecommerce workflows.
+                                <p class="feature_desc text-caption cl-text-26 letter-space--3">
+                                    Generate professional Shopify pages <br class="d-none d-xxl-block">
+                                    faster with intelligent tools built <br class="d-none d-xxl-block">
+                                    specifically for ecommerce <br class="d-none d-xxl-block">
+                                    workflows.
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1293,7 +1331,7 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="land-feature-v01 style-v5 type-1">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Frequently Bought Together
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1312,12 +1350,13 @@
                     <div class="col-lg-6">
                         <div class="land-feature-v01 style-v6">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Multiple Layouts, One Click
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Choose from a curated collection of header styles designed to showcase your brand,
-                                    captivate visitors, and drive conversions.
+                                    Choose from a curated collection of header styles designed to
+                                    <br class="d-none d-xxl-block">
+                                    showcase your brand, captivate visitors, and drive conversions.
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1331,12 +1370,13 @@
                     <div class="col-lg-6">
                         <div class="land-feature-v01 style-v7">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Stunning Lookbook
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Generate professional Shopify pages faster with intelligent tools built specifically
-                                    for ecommerce workflows.
+                                    Generate professional Shopify pages faster with intelligent tools built
+                                    <br class="d-none d-xxl-block">
+                                    specifically for ecommerce workflows.
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1350,7 +1390,7 @@
                     <div class="col-lg-6 col-xl-7">
                         <div class="land-feature-v01 style-v6 type-2">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Sticky Add to Cart
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1369,7 +1409,7 @@
                     <div class="col-lg-6 col-xl-5">
                         <div class="land-feature-v01 style-v6 type-3">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Pre Order
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1388,35 +1428,36 @@
                     <div class="col-12">
                         <div class="land-feature-v01 style-v8">
                             <div class="img-item">
-                                <img loading="lazy" width="1482" height="679"
-                                    src="https://placehold.co/1482x679/AA8BDB/AA8BDB" alt="Image">
+                                <img loading="lazy" width="1482" height="679" src="assets/images/item/bg-item-1.jpg"
+                                    alt="Image">
                             </div>
                             <div class="feature-content">
                                 <p class="feature_name h4 text-64 lh-xxl-70 gradient-text-v4">
                                     Advance Mega Menu
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Generate professional Shopify pages faster with intelligent tools built specifically
-                                    for ecommerce workflows.
+                                    Generate professional Shopify pages faster with intelligent tools built
+                                    specifically for ecommerce workflows.
                                 </p>
                             </div>
                             <div class="feature-image">
                                 <div class="image">
                                     <img loading="lazy" width="1152" height="480"
-                                        src="assets/images/section/feature-16.jpg" alt="Image">
+                                        src="assets/images/section/feature.png" alt="Image">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="land-feature-v01 style-v6">
+                        <div class="land-feature-v01 style-v6 type-1">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Upsell Popup
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Generate professional Shopify pages faster with intelligent tools built specifically
-                                    for ecommerce workflows.
+                                    Generate professional Shopify pages faster with intelligent tools built
+                                    <br class="d-none d-xl-block">
+                                    specifically for ecommerce workflows.
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1436,14 +1477,14 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="land-feature-v01 style-v5">
+                        <div class="land-feature-v01 style-v5 type-2">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Before & After Section
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Highlight transformations with a smooth before and after comparison that lets
-                                    customers clearly see results at a glance.
+                                    Highlight transformations with a smooth before and after comparison that
+                                    lets customers clearly see results at a glance.
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1455,9 +1496,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-4">
-                        <div class="land-feature-v01 style-v5">
+                        <div class="land-feature-v01 style-v5 type-3">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Exit Intent Popup
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
@@ -1479,11 +1520,11 @@
                     <div class="col-lg-6 col-xl-3">
                         <div class="land-feature-v01 style-v9">
                             <div class="feature-content">
-                                <p class="feature_name h4">
-                                    Exit Intent Popup
+                                <p class="feature_name h4 fs-22">
+                                    Shoppable Video
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    Win back customers with exit intent popup showing discounts & recommend products
+                                    Shopping on mobile is much more convenient with clean bottom navagation
                                 </p>
                             </div>
                             <div class="feature-image">
@@ -1495,22 +1536,25 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-5">
-                        <div class="land-feature-v01 style-v5">
+                        <div class="land-feature-v01 style-v5 type-4">
                             <div class="feature-content">
-                                <p class="feature_name h4">
+                                <p class="feature_name h4 fs-22">
                                     Volume Discounts
                                 </p>
                                 <p class="feature_desc text-caption cl-text-26">
-                                    This deal lets customers save more by buying larger quantities of the same product.
+                                    This deal lets customers save more by buying larger quantities <br
+                                        class="d-none d-xl-block">
+                                    of the same product.
                                 </p>
                             </div>
                             <div class="feature-image">
                                 <div class="image">
                                     <img loading="lazy" width="472" height="263"
                                         src="assets/images/section/feature-15.jpg" alt="Image">
-                                        <div class="fea-item item-7">
-                                            <img loading="lazy" width="330" height="181" src="assets/images/section/feature-15_2.jpg" alt="Image">
-                                        </div>
+                                    <div class="fea-item item-7">
+                                        <img loading="lazy" width="330" height="181"
+                                            src="assets/images/section/feature-15_2.jpg" alt="Image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1520,7 +1564,29 @@
         </div>
         <!-- /Outstanding -->
         <!-- Infinite Text -->
-        <div class="infiniteSlide-text">
+        <div class="infiniteSlide-text-2 flat-spacing-11 pt-0 position-relative">
+            <div class="s-bg-img item-3">
+                <svg width="1920" height="3029" viewBox="0 0 1920 3029" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1388_6106)">
+                        <path d="M997.5 973.5L2199 650L2227 973.5L1432.5 2379L720 2259L282 1684L997.5 973.5Z"
+                            fill="url(#paint0_linear_1388_6106)" fill-opacity="0.6" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1388_6106" x="-368" y="0" width="3245" height="3029"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="325" result="effect1_foregroundBlur_1388_6106" />
+                        </filter>
+                        <linearGradient id="paint0_linear_1388_6106" x1="2137.89" y1="650" x2="371.107" y2="2379"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1481FD" />
+                            <stop offset="1" stop-color="#97610C" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
             <div class="infiniteSlide infiniteSlide-wrapper" data-clone="2" data-speed="100">
                 <!-- Clone 1 -->
                 <div class="infiniteSlide-item">
@@ -1543,10 +1609,10 @@
         </div>
         <!-- /Infinite Text -->
         <!-- Inner Page -->
-        <div class="section-inner-page">
+        <div class="section-inner-page flat-animate-tab">
             <div class="container">
                 <div class="land-heading-2 text-center spacing-bottom-12">
-                    <p class="mini-title fw-semibold gradient-text mb-10">
+                    <p class="mini-title fw-semibold gradient-text letter-space-0 mb-10">
                         OPTIMIZED SHOP PAGES
                     </p>
                     <h2 class="title text-capitalize">
@@ -1587,7 +1653,7 @@
                     </div>
                     <div class="col-lg-8 col-xl-7 offset-xl-1">
                         <div class="tab-content">
-                            <div class="tab-pane active show" id="" role="tabpanel">
+                            <div class="tab-pane active show" id="productPage" role="tabpanel">
                                 <div dir="ltr" class="swiper slider-3d wrap-sw-over-2">
                                     <div class="swiper-wrapper">
                                         <!-- slide 1 -->
@@ -1598,7 +1664,7 @@
                                                         <a href="https://omniva-demo.vercel.app/index.html"
                                                             class="image">
                                                             <img class="siz424x522" loading="lazy" width="425"
-                                                                height="523" src="assets/images/demo/demo-1.jpg"
+                                                                height="523" src="assets/images/inner/product-1.jpg"
                                                                 alt="Image">
                                                         </a>
                                                         <div class="btn-action">
@@ -1629,7 +1695,7 @@
                                                         <a href="https://omniva-demo.vercel.app/index.html"
                                                             class="image">
                                                             <img class="siz424x522" loading="lazy" width="425"
-                                                                height="523" src="assets/images/demo/demo-1.jpg"
+                                                                height="523" src="assets/images/inner/product-2.jpg"
                                                                 alt="Image">
                                                         </a>
                                                         <div class="btn-action">
@@ -1660,7 +1726,7 @@
                                                         <a href="https://omniva-demo.vercel.app/index.html"
                                                             class="image">
                                                             <img class="siz424x522" loading="lazy" width="425"
-                                                                height="523" src="assets/images/demo/demo-1.jpg"
+                                                                height="523" src="assets/images/inner/product-3.jpg"
                                                                 alt="Image">
                                                         </a>
                                                         <div class="btn-action">
@@ -1683,6 +1749,44 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- slide 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/product-4.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sw-dot-default style-white tf-sw-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="shopPage" role="tabpanel">
+                                <div dir="ltr" class="swiper slider-3d wrap-sw-over-2">
+                                    <div class="swiper-wrapper">
                                         <!-- slide 1 -->
                                         <div class="swiper-slide">
                                             <div class="demo-card">
@@ -1691,7 +1795,7 @@
                                                         <a href="https://omniva-demo.vercel.app/index.html"
                                                             class="image">
                                                             <img class="siz424x522" loading="lazy" width="425"
-                                                                height="523" src="assets/images/demo/demo-1.jpg"
+                                                                height="523" src="assets/images/inner/shop-1.jpg"
                                                                 alt="Image">
                                                         </a>
                                                         <div class="btn-action">
@@ -1722,7 +1826,69 @@
                                                         <a href="https://omniva-demo.vercel.app/index.html"
                                                             class="image">
                                                             <img class="siz424x522" loading="lazy" width="425"
-                                                                height="523" src="assets/images/demo/demo-1.jpg"
+                                                                height="523" src="assets/images/inner/shop-2.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/shop-3.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/shop-4.jpg"
                                                                 alt="Image">
                                                         </a>
                                                         <div class="btn-action">
@@ -1749,7 +1915,236 @@
                                     <div class="sw-dot-default style-white tf-sw-pagination"></div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="" role="tabpanel">
+                            <div class="tab-pane" id="blogPage" role="tabpanel">
+                                <div dir="ltr" class="swiper slider-3d wrap-sw-over-2">
+                                    <div class="swiper-wrapper">
+                                        <!-- slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/blog-1.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/blog-2.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/blog-3.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sw-dot-default style-white tf-sw-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="otherPage" role="tabpanel">
+                                <div dir="ltr" class="swiper slider-3d wrap-sw-over-2">
+                                    <div class="swiper-wrapper">
+                                        <!-- slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/about.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/compare.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/contact.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="demo-card">
+                                                <div class="main-card">
+                                                    <div class="card-image">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="image">
+                                                            <img class="siz424x522" loading="lazy" width="425"
+                                                                height="523" src="assets/images/inner/store.jpg"
+                                                                alt="Image">
+                                                        </a>
+                                                        <div class="btn-action">
+                                                            <a href="https://omniva-demo.vercel.app/index.html"
+                                                                class="tf-btn btn-white hv-linear w-100">
+                                                                <span class="text">
+                                                                    View Demo
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <a href="https://omniva-demo.vercel.app/index.html"
+                                                            class="card-link link-inner-underline justify-content-center">
+                                                            <span class="fw-medium inner-underline">
+                                                                Left Thumbnail
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sw-dot-default style-white tf-sw-pagination"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1758,31 +2153,38 @@
         </div>
         <!-- /Inner Page -->
         <!-- Mobile -->
-        <div class="section-mobile flat-spacing-2">
-            <div class="container">
-                <div class="row justify-content-center align-items-center gy-16">
-                    <div class="col-md-4 col-xl-4 col-xxl-3 text-end md-d-none">
-                        <p class="text-164 fw-medium font-dm_san gradient-text">
-                            80%
-                        </p>
-                    </div>
-                    <div class="col-md-8 col-xl-6 col-xxl-5">
-                        <div class="land-heading-2 text-center text-md-start">
-                            <p class="mini-title fw-semibold gradient-text mb-24">
-                                MOBILE-FIRST EXPERIENCE
+        <div class="section-mobile flat-spacing-11 position-relative">
+            <div class="s-bg-img item-4"></div>
+            <div class="spacing-bottom-14">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center gy-16">
+                        <div class="col-md-4 col-xl-4 col-xxl-3 text-end md-d-none">
+                            <p class="text-164 fw-medium font-dm_san gradient-text">
+                                80%
                             </p>
-                            <h2 class="title text-capitalize mb-24">
-                                Of Your <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
-                                    Traffic
-                                </span> Comes From Mobile
-                            </h2>
-                            <p class="desc cl-text-26">
-                                That’s why mobile display is more important than ever. Omniva is carefully optimized to
-                                help your store look beautiful, load smoothly, and convert better on mobile devices.
-                            </p>
+                        </div>
+                        <div class="col-md-8 col-xl-6 col-xxl-5">
+                            <div class="land-heading-2 text-center text-md-start">
+                                <p class="mini-title fw-semibold gradient-text letter-space-0 mb-24">
+                                    MOBILE-FIRST EXPERIENCE
+                                </p>
+                                <h2 class="title text-capitalize mb-24">
+                                    Of Your <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
+                                        Traffic
+                                    </span> Comes <br class="d-none d-xl-block">
+                                    From Mobile
+                                </h2>
+                                <p class="desc cl-text-26">
+                                    That’s why mobile display is more important than ever. Omniva is carefully optimized
+                                    to
+                                    help your store look beautiful, load smoothly, and convert better on mobile devices.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
                 <div dir="ltr" class="swiper tf-swiper" data-preview="4" data-tablet="3" data-mobile-sm="2"
                     data-mobile="1" data-space-lg="30" data-space-md="20" data-space="15" data-pagination="1"
                     data-pagination-sm="12" data-pagination-md="3" data-pagination-lg="4">
@@ -1797,7 +2199,7 @@
                                         <source src="assets/images/landing/video/home.mp4" type="video/mp4">
                                     </video> -->
                                 </div>
-                                <h5 class="name">Mobile Screen Menu</h5>
+                                <p class="name">Mobile Screen Menu</p>
                             </div>
                         </div>
                         <!-- slide 2 -->
@@ -1811,9 +2213,9 @@
         </div>
         <!-- /Mobile -->
         <!-- Func -->
-        <div class="flat-spacing">
+        <div class="flat-spacing pt-0">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="land-heading-2 text-center text-md-start">
                             <h2 class="title text-capitalize mb-24">
@@ -1827,8 +2229,9 @@
                                 Features for FREE
                             </h2>
                             <p class="desc cl-text-26">
-                                Premium quality, exclusive features, and zero cost for your website simple, fast, and
-                                fully optimized.
+                                Premium quality, exclusive features, and zero cost for your website <br
+                                    class="d-none d-xl-block">
+                                simple, fast, and fully optimized.
                             </p>
                         </div>
                     </div>
@@ -1840,8 +2243,19 @@
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="29" height="33"
+                                                    src="assets/images/item/html.png" alt="Image">
+                                            </div>
+                                            <p class="name">
+                                                HTML5
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="infiniteSlide-item">
+                                        <div class="wg-exclusive">
+                                            <div class="logo">
+                                                <img loading="lazy" width="29" height="33"
+                                                    src="assets/images/item/css.png " alt="Image">
                                             </div>
                                             <p class="name">
                                                 CSS3
@@ -1851,22 +2265,11 @@
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="33" height="26"
+                                                    src="assets/images/item/bootstrap.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="infiniteSlide-item">
-                                        <div class="wg-exclusive">
-                                            <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
-                                            </div>
-                                            <p class="name">
-                                                CSS3
+                                                Bootstrap 5
                                             </p>
                                         </div>
                                     </div>
@@ -1879,11 +2282,11 @@
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="33" height="24"
+                                                    src="assets/images/item/sass.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                SASS
                                             </p>
                                         </div>
                                     </div>
@@ -1891,21 +2294,21 @@
                                         <div class="wg-exclusive">
                                             <div class="logo">
                                                 <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                    src="assets/images/item/swiper.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                Swipe Slider
                                             </p>
                                         </div>
                                     </div>
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="33" height="15"
+                                                    src="assets/images/item/w3c.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                W3C Validation
                                             </p>
                                         </div>
                                     </div>
@@ -1918,10 +2321,10 @@
                                         <div class="wg-exclusive">
                                             <div class="logo">
                                                 <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                    src="assets/images/item/wow.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                Wow JS
                                             </p>
                                         </div>
                                     </div>
@@ -1929,10 +2332,10 @@
                                         <div class="wg-exclusive">
                                             <div class="logo">
                                                 <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                    src="assets/images/item/ps.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                PhotoSwipes
                                             </p>
                                         </div>
                                     </div>
@@ -1940,10 +2343,10 @@
                                         <div class="wg-exclusive">
                                             <div class="logo">
                                                 <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                    src="assets/images/item/javascript.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                Lightbox
                                             </p>
                                         </div>
                                     </div>
@@ -1956,33 +2359,33 @@
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="38" height="32"
+                                                    src="assets/images/item/compare.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                Image Compare Viewer
                                             </p>
                                         </div>
                                     </div>
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="33" height="26"
+                                                    src="assets/images/item/google-fonts.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                Google Fonts
                                             </p>
                                         </div>
                                     </div>
                                     <div class="infiniteSlide-item">
                                         <div class="wg-exclusive">
                                             <div class="logo">
-                                                <img loading="lazy" width="33" height="33"
-                                                    src="https://placehold.co/33x33" alt="Image">
+                                                <img loading="lazy" width="34" height="34"
+                                                    src="assets/images/item/seo.png" alt="Image">
                                             </div>
                                             <p class="name">
-                                                CSS3
+                                                SEO Optimized
                                             </p>
                                         </div>
                                     </div>
@@ -1995,29 +2398,35 @@
         </div>
         <!-- /Func -->
         <!-- Bundle -->
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-10 mx-auto">
-                    <div class="banner-bundle">
-                        <div class="img-item item-1 d-none"></div>
-                        <div class="content">
-                            <p class="title h3">
-                                Unlock the full Omniva Bundle
-                            </p>
-                            <p class="desc cl-text-26">
-                                Purchase Omniva HTML and receive the Omniva Figma version at no <br>
-                                extra cost. Enjoy seamless design, customization in one complete <br>
-                                package.
-                            </p>
-                            <a href="#" class="tf-btn btn-linear">
-                                <i class="icon icon-Bag"></i>
-                                <span class="text">
-                                    Purchase Now
-                                </span>
-                            </a>
-                        </div>
-                        <div class="image">
-                            <img loading="lazy" width="316" height="237" src="https://placehold.co/316x237" alt="Image">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-10 mx-auto">
+                        <div class="banner-bundle">
+                            <div class="img-item item-1 pst-1"></div>
+                            <div class="img-item item-1 pst-2"></div>
+                            <div class="img-item item-1 pst-3"></div>
+                            <div class="img-item item-1 pst-4"></div>
+                            <div class="content">
+                                <p class="title h3 lh-xl-48">
+                                    Unlock The Full Omniva Bundle
+                                </p>
+                                <p class="desc cl-text-26">
+                                    Purchase Omniva HTML and receive the Omniva Figma version at no <br>
+                                    extra cost. Enjoy seamless design, customization in one complete <br>
+                                    package.
+                                </p>
+                                <a href="#" class="tf-btn btn-linear">
+                                    <i class="icon icon-Bag fs-24"></i>
+                                    <span class="text">
+                                        Purchase Omniva
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="image">
+                                <img loading="lazy" width="336" height="261" src="assets/images/item/figma.png"
+                                    alt="Image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2025,10 +2434,10 @@
         </div>
         <!-- /Bundle -->
         <!-- FAQ -->
-        <div class="flat-spacing">
+        <div class="flat-spacing-11">
             <div class="container">
-                <div class="land-heading-2 text-center">
-                    <p class="mini-title fw-semibold gradient-text mb-24">
+                <div class="land-heading-2 text-center spacing-bottom-1">
+                    <p class="mini-title fw-semibold gradient-text mb-10">
                         FAQ
                     </p>
                     <h2 class="title text-capitalize">
@@ -2130,50 +2539,97 @@
         </div>
         <!-- Footer -->
         <footer class="tf-footer-landing">
-            <div class="footer-top">
-                <p class="text-124">
-                    Grab <span class="gradient-text">
-                        Omniva
-                    </span> Now
-                </p>
-                <div class="wg-circular-text style-2">
-                    <div class="ic-wrap">
-                        <i class="icon icon-Thunder2 gradient-text"></i>
-                    </div>
-                    <p class="original-text">
-                        HIGHCONVERTING
+            <div class="s-bg-img item-5">
+                <svg width="1920" height="2507" viewBox="0 0 1920 2507" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1850_4264)">
+                        <path d="M863.5 973.5L-338 650L-366 973.5L428.5 2379L1141 2259L1579 1684L863.5 973.5Z"
+                            fill="url(#paint0_linear_1850_4264)" fill-opacity="0.6" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1850_4264" x="-1016" y="0" width="3245" height="3029"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="325" result="effect1_foregroundBlur_1850_4264" />
+                        </filter>
+                        <linearGradient id="paint0_linear_1850_4264" x1="-276.893" y1="650" x2="1489.89" y2="2379"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDA414" />
+                            <stop offset="1" stop-color="#97610C" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="s-bg-img item-6">
+                <svg width="1920" height="2325" viewBox="0 0 1920 2325" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1845_4255)">
+                        <path d="M877.5 973.5L2079 650L2107 973.5L1312.5 2379L600 2259L162 1684L877.5 973.5Z"
+                            fill="url(#paint0_linear_1845_4255)" fill-opacity="0.6" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1845_4255" x="-488" y="0" width="3245" height="3029"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="325" result="effect1_foregroundBlur_1845_4255" />
+                        </filter>
+                        <linearGradient id="paint0_linear_1845_4255" x1="2017.89" y1="650" x2="251.107" y2="2379"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1481FD" />
+                            <stop offset="1" stop-color="#97610C" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="position-relative z-1">
+                <div class="bg-item item-1"></div>
+                <div class="footer-top">
+                    <p class="text_1 text-124 spacing-bottom-1">
+                        Grab <span class="gradient-text">
+                            Omniva
+                        </span> Now
                     </p>
-                    <div class="circular-text"></div>
+                    <div class="wg-circular-text style-2 spacing-bottom-1">
+                        <div class="ic-wrap">
+                            <i class="icon icon-Thunder2 gradient-text"></i>
+                        </div>
+                        <p class="original-text">
+                            HIGHCONVERTING
+                        </p>
+                        <div class="circular-text"></div>
+                    </div>
+                    <p class="text_2 text-124 text-end">
+                        Boost Your Sale
+                    </p>
                 </div>
-                <p class="text-124 text-end">
-                    Boost Your Sale
-                </p>
-            </div>
-            <div class="footer-inner">
-                <h2> <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
-                        One Time
-                    </span>
-                    Payment - Free <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
-                        Lifetime
-                    </span> Update
-                </h2>
-                <p class="desc">
-                    Purchase Omniva today and start to creating your beautiful business website.
-                </p>
-                <a href="#" class="tf-btn btn-linear">
-                    <i class="icon icon-ShoppingBag"></i>
-                    <span class="text">
-                        Buy Templates
-                    </span>
-                </a>
-            </div>
-            <div class="container">
-                <span class="br-line bg-white_30"></span>
-            </div>
-            <div class="footer-bottom font-plus_jakarta text-center fw-medium cl-text-27">
-                Copyright © <span class="text-white">
-                    Omniva
-                </span> All Right Reverved. Powered by <span class="text-white">Themesflat</span>.
+                <div class="container">
+                    <div class="footer-inner">
+                        <h2 class="mb-24"> <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
+                                One Time
+                            </span>
+                            Payment - Free <span class="font-instrument_serif fst-italic fw-normal cl-text-25">
+                                Lifetime
+                            </span> Update
+                        </h2>
+                        <p class="desc cl-text-4 spacing-bottom-2">
+                            Purchase Omniva today and start to creating your beautiful business website.
+                        </p>
+                        <a href="#" class="tf-btn btn-linear">
+                            <i class="icon icon-Bag fs-24"></i>
+                            <span class="text">
+                                Buy Templates
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <span class="br-line bg-white_30"></span>
+                </div>
+                <div class="footer-bottom font-plus_jakarta text-center fw-medium cl-text-27">
+                    Copyright © <span class="text-white">
+                        Omniva
+                    </span> All Right Reverved. Powered by <span class="text-white">Themesflat</span>.
+                </div>
             </div>
         </footer>
         <!-- /Footer -->

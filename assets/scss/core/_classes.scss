@@ -538,6 +538,32 @@
     }
 }
 
+.flat-spacing-11 {
+    padding-top: 220px;
+    padding-bottom: 220px;
+
+    @include res(xxxl) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+    }
+
+    @include res(xxl) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include res(ssm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
 .spacing-top-1 {
     margin-top: 60px;
 
@@ -712,6 +738,22 @@
 
 .spacing-bottom-13 {
     margin-bottom: 100px;
+
+    @include res(xxl) {
+        margin-bottom: 80px;
+    }
+
+    @include res(xl) {
+        margin-bottom: 40px;
+    }
+
+    @include res(lg) {
+        margin-bottom: 30px;
+    }
+}
+
+.spacing-bottom-14 {
+    margin-bottom: 94px;
 
     @include res(xxl) {
         margin-bottom: 80px;

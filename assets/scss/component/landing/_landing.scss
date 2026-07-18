@@ -200,7 +200,7 @@
     position: relative;
     border-radius: 80px;
     padding-top: 93px;
-    padding-bottom: 169px;
+    padding-bottom: 165px;
     overflow: hidden;
 
     &::before,
@@ -527,7 +527,7 @@
     }
 
     @include res(lg, min) {
-        margin-bottom: -50px;
+        margin-bottom: -66px;
     }
 }
 
@@ -663,6 +663,10 @@
 .landing-bottom {
     display: grid;
     place-items: center;
+
+    @include res(xxl, min) {
+        padding-top: 96px;
+    }
 }
 
 .highlight-item {
@@ -863,6 +867,14 @@
         }
     }
 
+    @include res(xxxl, min) {
+        padding-top: 248px;
+
+        .land-heading {
+            margin-bottom: 100px;
+        }
+    }
+
     @include res(lg) {
         .land-heading {
             gap: 30px;
@@ -880,7 +892,7 @@
     display: flex;
     flex-direction: column;
     background: #171717;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
     height: 100%;
@@ -972,6 +984,7 @@
 
         .feature-image {
             justify-content: flex-end;
+            padding-top: 21px;
             padding-bottom: 0;
             padding-right: 0;
         }
@@ -1010,7 +1023,7 @@
 }
 
 .land-feature-v01.style-v2 {
-    justify-content: space-between;
+    // justify-content: space-between;
     height: 100%;
 
     .box-fomo {
@@ -1061,22 +1074,29 @@
         .feature-content {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 28px;
+            margin-bottom: 27px;
             gap: 15px;
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 23px;
 
             >.tf-list {
                 place-items: end;
+                margin-top: -12px;
             }
         }
 
         >.tf-list {
             gap: 48px;
+            padding: 0;
+            padding-bottom: 30px;
         }
 
         .box-fomo {
             &.fomo-1 {
                 max-width: 296px;
                 width: 100%;
+                margin-right: 52px;
             }
 
             &.fomo-2 {
@@ -1127,13 +1147,14 @@
 
 .land-feature-v01.style-v3 {
     @include res(xl, min) {
+
         .feature-content {
-            padding-top: 22px;
+            padding-top: 21px;
             padding-right: 44px;
         }
 
         .feature-image {
-            padding-top: 44px;
+            padding-top: 38px;
             padding-bottom: 32px;
         }
     }
@@ -1141,6 +1162,14 @@
 
 .land-feature-v01.style-v4 {
     @include res(xl, min) {
+        justify-content: space-between;
+
+        .feature-content {
+            margin-bottom: -55px;
+            position: relative;
+            z-index: 3;
+        }
+
         .feature-image {
             padding-bottom: 0;
             padding-left: 0;
@@ -1177,6 +1206,34 @@
             padding-left: 40px;
             padding-right: 39px;
         }
+
+        &.type-2 {
+            .feature-image {
+                padding-top: 53px;
+            }
+
+            .feature-content {
+                padding-top: 49px;
+                // padding-bottom: 49px;
+            }
+        }
+
+        &.type-3 {
+            .feature-image {
+                padding-top: 17px;
+            }
+
+            .feature-content {
+                padding-top: 38px;
+                padding-bottom: 38px;
+            }
+        }
+
+        &.type-4 {
+            .feature-image {
+                padding-top: 32px;
+            }
+        }
     }
 }
 
@@ -1187,8 +1244,18 @@
         }
 
         .feature-image {
-            padding-top: 32px;
+            padding-top: 36px;
             padding-bottom: 42px;
+        }
+
+        &.type-1 {
+            .image {
+                margin-left: 38px;
+            }
+
+            .feature-image {
+                padding-bottom: 30px;
+            }
         }
 
         &.type-2 {
@@ -1233,12 +1300,41 @@
     .img-item {
         position: absolute;
         inset: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .feature-image {
+        .image {
+            background: #0000004D;
+            border-radius: 20px 20px 0px 0px;
+
+        }
     }
 
     @include res(xl, min) {
         .feature-image {
             padding-bottom: 0;
+            padding-top: 50px;
         }
+
+        .feature-content {
+            padding-top: 44px;
+        }
+    }
+}
+
+.land-feature-v01.style-v9 {
+    .feature-content {
+        text-align: center;
+    }
+
+    @include res(xl, min) {
+        .feature-content {}
     }
 }
 
@@ -1263,12 +1359,12 @@
 
 .card-device-mobile {
     display: grid;
-    gap: 15px;
     place-items: center;
     border-radius: 29px;
     border: 1px solid #FFFFFF1A;
     background: #A2A2A233;
     padding: 14px;
+    gap: 13px;
 
     .wrap-video {
         border-radius: 19px;
@@ -1276,8 +1372,6 @@
     }
 
     @include res(xl, min) {
-        gap: 24px;
-
         .name {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -1334,6 +1428,7 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 21.03%, rgba(0, 0, 0, 0) 76.16%, #000000 100%);
+        pointer-events: none;
     }
 }
 
@@ -1381,13 +1476,53 @@
         margin-bottom: 32px;
     }
 
+    .img-item {
+        position: absolute;
+        z-index: 1;
+
+        &.item-1 {
+            width: 180px;
+            height: 180px;
+            background: rgba(200, 237, 107, 0.59);
+            filter: blur(112px);
+
+            &.pst-1 {
+                left: -26px;
+                top: -51px;
+
+            }
+
+            &.pst-2 {
+                left: 1104px;
+                top: -34px;
+            }
+
+            &.pst-3 {
+                left: 602px;
+                top: -26px;
+                background: rgba(237, 107, 107, 0.59);
+            }
+
+            &.pst-4 {
+                left: 694px;
+                top: 239px;
+                background: rgba(107, 163, 237, 0.59);
+            }
+        }
+    }
+
     @include res(xl, min) {
-        padding: 41px 73px;
+        padding: 35px 73px 33px;
 
         .desc {
             margin-bottom: 48px;
         }
     }
+
+    @include res(xxl, min) {
+        padding-right: 156px;
+    }
+
 }
 
 .list-faq {
@@ -1400,5 +1535,131 @@
         border-radius: 10px;
         overflow: hidden;
         backdrop-filter: blur(25px);
+    }
+}
+
+.tf-footer-landing {
+    position: relative;
+
+    .text_1 {
+        padding-left: 129px;
+    }
+
+    .text_2 {
+        padding-right: 89px;
+    }
+
+    .footer-inner {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    @include res(xxl, min) {
+        .footer-top {
+            padding-top: 220px;
+            padding-bottom: 220px;
+        }
+
+        .footer-inner {
+            padding-top: 0;
+            padding-bottom: 115px;
+        }
+    }
+
+    @include res(xxl) {
+        .text_1 {
+            padding-left: 15px;
+        }
+
+        .text_2 {
+            padding-right: 15px;
+        }
+    }
+}
+
+.infiniteSlide-text-2 {
+    .infiniteSlide-item {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @include res(xl, min) {
+        .infiniteSlide-item {
+            margin-left: 32px;
+            margin-right: 32px;
+        }
+    }
+}
+
+.s-bg-img {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 0;
+    pointer-events: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &.item-1 {
+        top: 14%;
+    }
+
+    &.item-2 {
+        top: -5%;
+    }
+
+    &.item-3 {
+        top: -100%;
+    }
+
+    &.item-4 {
+        width: 606px;
+        height: 606px;
+        left: -109px;
+        background: linear-gradient(180deg, #7038B5 0%, #055D7F 100%);
+        filter: blur(250px);
+    }
+
+    &.item-5 {
+        top: -50%;
+    }
+
+    &.item-6 {
+        top: -60%;
+    }
+}
+
+.section-demo-page {
+    position: relative;
+
+    @include res(xxxl, min) {
+        padding-top: 244px;
+        padding-bottom: 117px;
+    }
+}
+
+.section-about-landing {
+    .about-landing {
+        max-width: 1382px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include res(xxl, min) {
+        padding-top: 128px;
+    }
+}
+
+.section-mobile {
+    @include res(xxxl, min) {
+        padding-top: 271px;
     }
 }
