@@ -1606,6 +1606,10 @@
     .sm-cl-black {
         color: var(--black) !important;
     }
+
+    .sm-overflow-hidden {
+        overflow: hidden !important;
+    }
 }
 
 @include res(ssm) {

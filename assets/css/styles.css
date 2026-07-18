@@ -3379,6 +3379,9 @@ h6,
   .sm-cl-black {
     color: var(--black) !important;
   }
+  .sm-overflow-hidden {
+    overflow: hidden !important;
+  }
 }
 @media (max-width: 425px) {
   .ssm-d-none {
