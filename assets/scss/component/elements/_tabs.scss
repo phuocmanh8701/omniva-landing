@@ -171,16 +171,19 @@
     position: relative;
     padding-left: 16px;
     padding-right: 16px;
+    border: 1px solid var(--white_20);
 
     &::before {
         content: "";
         position: absolute;
-        inset: -1px;
+        inset: -2px;
         background: linear-gradient(90deg, #26EDFF, #FFD651, #26EDFF);
         background-size: 200% 100%;
         animation: gradientFlow 2s linear infinite;
         z-index: -1;
         border-radius: var(--radius);
+        // @include hidden;
+        @include transition3;
     }
 
     .accordion-action {
@@ -191,6 +194,12 @@
 
     .accordion-content {
         padding-bottom: 16px;
+    }
+
+    &:has(.accordion-action.collapsed) {
+        &::before {
+            @include hidden;
+        }
     }
 
     @include res(lg, min) {

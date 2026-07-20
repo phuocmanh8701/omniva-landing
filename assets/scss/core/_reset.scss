@@ -141,10 +141,6 @@ body {
         cursor: grab;
         background-color: var(--critical);
     }
-
-    @include res(xl) {
-        padding-bottom: 67px;
-    }
 }
 
 
