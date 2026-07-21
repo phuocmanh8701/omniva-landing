@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap'); */
 
 @font-face {
     font-family: 'Satoshi';
@@ -84,4 +84,12 @@
     font-style: italic;
     font-weight: 800;
     src: local('Satoshi Black Italic'), url('Satoshi-BlackItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'FreeStyle';
+    font-style: normal;
+    font-weight: normal;
+    src: local('FreeStyle'), url('FREESCPT.TTF') format('truetype');
 }

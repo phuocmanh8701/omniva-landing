@@ -2746,6 +2746,44 @@
             });
         });
     };
+
+    function footerTextParallax() {
+        const footer = document.querySelector(".tf-footer-landing");
+        const textRight = document.querySelector(".textMoveRight");
+        const textLeft = document.querySelector(".textMoveLeft");
+
+        if (!footer || !textRight || !textLeft) return;
+
+        function update() {
+            if (window.innerWidth < 767) {
+                textRight.style.transform = "";
+                textLeft.style.transform = "";
+                return;
+            }
+
+            const rect = footer.getBoundingClientRect();
+            const vh = window.innerHeight;
+
+            let progress = (vh - rect.top) / (vh + rect.height);
+            progress = Math.max(0, Math.min(progress, 1));
+
+            const percent = progress * 50;
+
+            textRight.style.transform = `translateX(${percent}%)`;
+            textLeft.style.transform = `translateX(-${percent}%)`;
+        }
+
+        update();
+
+        if (window.lenis) {
+            window.lenis.on("scroll", update);
+        } else {
+            window.addEventListener("scroll", update, { passive: true });
+        }
+
+        window.addEventListener("resize", update);
+    }
+
     // Dom Ready
     $(function () {
         headerFix();
@@ -2756,35 +2794,11 @@
         // deleteWishList();
         // goTop();
         // sidebarMobile();
-        // staggerWrap();
-        // clickModalSecond();
-        // totalPriceVariant();
-        // handleProgress();
-        // handleFooter();
         infiniteSlide();
-        // addWishList();
-        // handleSidebarFilter();
-        // unitEstimateShipping();
-        // textCopy();
-        // parallaxieInit();
-        // tableCompareRemove();
-        // handleMobileMenu();
-        // scrollBottomSticky();
-        // showPassword();
-        // hoverPin();
-        // rateClick();
-        counterRun();
-        // updateBundleTotal();
-        // noticePop();
-        // autoPopup();
-        // hoverVideo();
-        // swatchColor();
-        // heightTable();
-        // toggleControl();
-        // scrollGridProduct();
-        // clickActive();
-        circleText();
 
+        counterRun();
+        circleText();
+        footerTextParallax();
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
                 preloader();

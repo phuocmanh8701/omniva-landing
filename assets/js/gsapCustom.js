@@ -786,6 +786,33 @@
         });
     };
 
+    function footerTextParallax() {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(".textMoveRight",
+            { x: "0%" },
+            {
+                x: "100%",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".side-init",
+                    start: "top top",
+                    end: () => "+=" + window.innerHeight, // đúng 1 màn hình, luôn luôn
+                    scrub: 1,
+                    markers: true,
+                }
+            }
+        );
+        // gsap.to(".text_2", {
+        //     xPercent: -10,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: ".footer-top .text_2",
+        //         start: "top bottom",
+        //         end: "bottom top",
+        //         scrub: true,
+        //     }
+        // });
+    }
 
     document.addEventListener("DOMContentLoaded", function () {
         // blogStep();
@@ -796,6 +823,7 @@
         // parallaxEngine();
         // initCateGsap();
         // heroBannerParallax();
-        hoverScaleText();
+        // hoverScaleText();
+        // footerTextParallax();
     });
 })(jQuery);

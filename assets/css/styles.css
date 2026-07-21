@@ -281,11 +281,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 body::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
 }
 body::-webkit-scrollbar-thumb {
   cursor: grab;
-  background-color: var(--critical);
+  background-color: var(--white);
 }
 
 img {
@@ -929,7 +929,7 @@ h6,
 }
 
 .font-script {
-  font-family: "Style Script", cursive;
+  font-family: "FreeStyle";
 }
 
 .text-hero {
@@ -23187,12 +23187,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
 
 .tf-footer-landing {
   position: relative;
-}
-.tf-footer-landing .text_1 {
-  padding-left: 129px;
-}
-.tf-footer-landing .text_2 {
-  padding-right: 89px;
 }
 .tf-footer-landing .footer-inner {
   text-align: center;

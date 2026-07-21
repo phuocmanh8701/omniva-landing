@@ -134,12 +134,12 @@ body {
     text-rendering: optimizeLegibility;
 
     &::-webkit-scrollbar {
-        width: 0px;
+        width: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
         cursor: grab;
-        background-color: var(--critical);
+        background-color: var(--white);
     }
 }
 
