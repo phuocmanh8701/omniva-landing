@@ -835,6 +835,19 @@
             background-size: 200% 100%;
             animation: gradientFlow 2s linear infinite;
         }
+
+        .ic-wrap {
+
+            &::after,
+            &::before {
+                display: none;
+            }
+
+            .item {
+                position: absolute;
+                inset: 0;
+            }
+        }
     }
 }
 
@@ -943,39 +956,45 @@
         &.item-1 {
             left: 0;
             bottom: 5%;
+            right: 67%;
         }
 
         &.item-2 {
             right: 10px;
             top: 40%;
+            left: 58%;
         }
 
         &.item-3 {
             padding: 1px;
-            // background: #000;
             background: linear-gradient(90deg, #26EDFF 0%, #FFD651 100%);
             right: 0;
             top: 0;
+            left: 56%;
         }
 
         &.item-4 {
             bottom: 0;
             left: 0;
+            right: 58%;
         }
 
         &.item-5 {
             right: 0;
             top: 0;
+            left: 54%;
         }
 
         &.item-6 {
             top: 0;
             right: 0;
+            left: 68%;
         }
 
         &.item-7 {
             top: 0;
             left: 20px;
+            right: 26%;
         }
     }
 
@@ -1367,8 +1386,13 @@
     gap: 13px;
 
     .wrap-video {
-        border-radius: 19px;
+        border-radius: 20px;
         overflow: hidden;
+        display: flex;
+
+        video {
+            // aspect-ratio: calc(318/538);
+        }
     }
 
     @include res(xl, min) {
@@ -1441,7 +1465,7 @@
     border-radius: var(--radius);
     overflow: hidden;
     position: relative;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 30px;
 
     &::after,
@@ -1523,6 +1547,24 @@
         padding-right: 156px;
     }
 
+    @include res(lg) {
+
+        .content,
+        .image {
+            width: 50%;
+        }
+    }
+
+    @include res(md) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        text-align: center;
+
+        .content,
+        .image {
+            width: 100%;
+        }
+    }
 }
 
 .list-faq {
