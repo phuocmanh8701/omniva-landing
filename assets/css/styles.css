@@ -22772,6 +22772,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
   padding-bottom: 0;
   padding-right: 0;
 }
+.land-feature-v01.style-v1 .feature-image .image {
+  overflow: hidden;
+  border-radius: 10px;
+}
 @media (min-width: 1200px) {
   .land-feature-v01 .feature_name {
     margin-bottom: 15px;
@@ -22889,6 +22893,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
   }
 }
 
+.land-feature-v01.style-v3 .fea-item {
+  border-radius: 18px;
+  background: rgba(76, 76, 76, 0.6);
+  backdrop-filter: blur(10px);
+}
 @media (min-width: 1200px) {
   .land-feature-v01.style-v3 .feature-content {
     padding-top: 21px;

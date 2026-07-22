@@ -1006,6 +1006,11 @@
             padding-top: 21px;
             padding-bottom: 0;
             padding-right: 0;
+
+            .image {
+                overflow: hidden;
+                border-radius: 10px;
+            }
         }
 
     }
@@ -1165,6 +1170,12 @@
 }
 
 .land-feature-v01.style-v3 {
+    .fea-item {
+        border-radius: 18px;
+        background: #4C4C4C99;
+        backdrop-filter: blur(10px);
+    }
+
     @include res(xl, min) {
 
         .feature-content {
