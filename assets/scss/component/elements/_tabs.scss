@@ -152,7 +152,7 @@
         gap: 22px;
     }
 
-    @include res(xl) {
+    @include res(lg) {
         display: flex;
         overflow: auto;
         text-wrap: nowrap;

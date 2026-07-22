@@ -449,14 +449,18 @@
             }
         }
 
-        @include res(xl) {
+        @include res(xxl) {
             .content {
                 padding: 20px 15px;
             }
 
             .box-perform {
-                // padding: 12px;
                 gap: 12px;
+            }
+        }
+
+        @include res(xl) {
+            .box-perform {
                 max-width: 396px;
                 width: 100%;
                 margin: 0 auto;
@@ -559,15 +563,19 @@
 
     .card-image {
         margin-bottom: 10px;
-        border-radius: 10px;
         overflow: hidden;
         position: relative;
 
         .image {
+            overflow: hidden;
+            border-radius: 10px;
             display: flex;
 
             img {
                 aspect-ratio: calc(454/557);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
 
                 &.siz424x522 {
                     aspect-ratio: calc(424/522);
@@ -598,7 +606,7 @@
             inset: 0;
             background: linear-gradient(0deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 67.59%);
             z-index: 1;
-            border-radius: 10px;
+            // border-radius: 10px;
             @include transition3;
             pointer-events: none;
         }
@@ -1369,10 +1377,6 @@
 }
 
 .slider-3d {
-    // width: 900px;
-    max-width: 808px;
-    // max-height: 612px;
-    // overflow: visible;
     perspective: 1200px;
 
     .swiper-wrapper {
@@ -1384,6 +1388,11 @@
         max-width: 444px;
         transition: transform .45s ease, opacity .45s ease;
         transform-style: preserve-3d;
+    }
+
+    @include res(lg, min) {
+        max-width: 808px;
+
     }
 }
 
