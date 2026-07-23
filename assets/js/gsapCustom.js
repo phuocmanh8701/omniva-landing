@@ -796,7 +796,7 @@
                 scrollTrigger: {
                     trigger: ".side-init",
                     start: "top top",
-                    end: () => "+=" + window.innerHeight, // đúng 1 màn hình, luôn luôn
+                    end: () => "+=" + window.innerHeight,
                     scrub: 1,
                     markers: true,
                 }
