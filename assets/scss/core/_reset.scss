@@ -133,14 +133,14 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
+    // &::-webkit-scrollbar {
+    //     width: 4px;
+    // }
 
-    &::-webkit-scrollbar-thumb {
-        cursor: grab;
-        background-color: var(--white);
-    }
+    // &::-webkit-scrollbar-thumb {
+    //     cursor: grab;
+    //     background-color: var(--white);
+    // }
 }
 
 
